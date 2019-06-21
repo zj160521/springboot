@@ -1,0 +1,6 @@
+# resources文件夹配置成资源文件可在.iml文件中直接配置，也可在File->Project Structure中配置
+server:
+  port: 8081
+spring:
+  application:
+    name: module1
