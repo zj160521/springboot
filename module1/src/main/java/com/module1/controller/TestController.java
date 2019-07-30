@@ -1,5 +1,6 @@
 package com.module1.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/test")
+@Api(value="测试接口",description = "测试接口")
 public class TestController {
     @RequestMapping(value = "/getMsg", method = RequestMethod.POST)
     public Object getMsg() {
