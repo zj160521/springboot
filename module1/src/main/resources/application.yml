@@ -3,14 +3,6 @@ server:
   port: 8081
 spring:
   datasource:
-    name: dataSource
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      type: com.alibaba.druid.pool.DruidDataSource
-      druid:
-        initial-size: 3
-        max-active: 15
-        min-idle: 3
-        max-wait: -1
     url: jdbc:mysql://192.169.7.20:8066/GM?useServerPrepStmts=false&rewriteBatchedStatements=true
     username: root
     password: 123456
