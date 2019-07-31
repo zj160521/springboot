@@ -1,6 +1,10 @@
 package com.module1.controller;
 
+import com.module1.domain.TestDO;
+import com.module1.service.TestService;
+import com.module1.util.IDGenerator;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +18,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 @Api(value="测试接口",description = "测试接口")
 public class TestController {
+    @Autowired
+    private TestService service;
     @RequestMapping(value = "/getMsg", method = RequestMethod.POST)
     public Object getMsg() {
         String msg = "测试消息！";
         System.out.println(msg);
         return msg;
+    }
+
+    @RequestMapping(value = "/insert", method = RequestMethod.POST)
+    public Object insert() {
+        TestDO testDO = new TestDO();
+        testDO.setId(IDGenerator.uuid());
+        testDO.setName("手动阀");
+        service.insert(testDO);
+        return "ok";
+    }
+
+    @RequestMapping(value = "/get", method = RequestMethod.POST)
+    public Object get() {
+        return service.get();
     }
 }
