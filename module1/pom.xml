@@ -12,6 +12,7 @@
     <!-- 定义模块名及标签 -->
     <artifactId>module1</artifactId>
     <name>module1</name>
+    <packaging>jar</packaging>
 
     <!-- 父模块采用dependencyManagement，子模块相同依赖可不用配置版本
          如果没采用dependencyManagement，子模块直接引用父模块依赖 -->
