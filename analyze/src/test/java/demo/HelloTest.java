@@ -10,9 +10,6 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class HelloTest {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
     public void testSum() {
         Hello hello = new Hello();
