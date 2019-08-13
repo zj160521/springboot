@@ -38,15 +38,15 @@ public class GameRecordTopo {
 
 		return topology;
 	}
-	public static void main(String[] args) {
-		//游戏记录的topo
-		Topology gameRecord = GameRecordTopo.getTopology(args);
-		//游戏记录topo提交到集群
-		try {
-			StormSubmitter.submitTopology(gameRecord.getTopologyName(), gameRecord.getConf(), gameRecord.getStormTopology());
-		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) {
+//		//游戏记录的topo
+//		Topology gameRecord = GameRecordTopo.getTopology(args);
+//		//游戏记录topo提交到集群
+//		try {
+//			StormSubmitter.submitTopology(gameRecord.getTopologyName(), gameRecord.getConf(), gameRecord.getStormTopology());
+//		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }

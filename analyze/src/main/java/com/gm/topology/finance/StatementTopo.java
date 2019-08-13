@@ -47,14 +47,14 @@ public class StatementTopo {
 		return topology;
 	}
 
-	public static void main(String[] args) {
-		//财务统计
-		Topology financeStat = StatementTopo.getTopology(args);
-		try {
-			StormSubmitter.submitTopology(financeStat.getTopologyName(), financeStat.getConf(), financeStat.getStormTopology());
-		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) {
+//		//财务统计
+//		Topology financeStat = StatementTopo.getTopology(args);
+//		try {
+//			StormSubmitter.submitTopology(financeStat.getTopologyName(), financeStat.getConf(), financeStat.getStormTopology());
+//		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }
