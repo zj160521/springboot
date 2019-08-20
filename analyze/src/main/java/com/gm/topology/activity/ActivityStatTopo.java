@@ -34,14 +34,14 @@ public class ActivityStatTopo {
 		return topology;
 	}
 
-//	public static void main(String[] args) {
-//		//活动统计topo
-//		Topology activityStat = ActivityStatTopo.getTopology(args);
-//		try {
-//			StormSubmitter.submitTopology(activityStat.getTopologyName(), activityStat.getConf(), activityStat.getStormTopology());
-//		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public static void main(String[] args) {
+		//活动统计topo
+		Topology activityStat = ActivityStatTopo.getTopology(args);
+		try {
+			StormSubmitter.submitTopology(activityStat.getTopologyName(), activityStat.getConf(), activityStat.getStormTopology());
+		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
+			e.printStackTrace();
+		}
+	}
 	
 }

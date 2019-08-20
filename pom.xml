@@ -4,14 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <modules>
-        <!-- 子模块 -->
+    <modules><!-- 子模块 -->
         <module>module1</module>
         <module>module2</module>
         <module>analyze</module>
     </modules>
 
-    <parent>
+    <parent><!-- springboot 父级依赖,表明该项目是springboot项目 -->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.6.RELEASE</version>
@@ -25,7 +24,8 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>1.8</java.version> <!-- 指定Java版本 -->
+        <java.version>1.8</java.version> <!-- spring-boot-starter-parent默认指定Java1.8，此标签可修改 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><!-- spring-boot-starter-parent默认指定UTF-8，此标签可修改 -->
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <mysql.version>8.0.16</mysql.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
@@ -39,31 +39,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <!-- 工具包 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-            <!-- MongoDB -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-mongodb</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <!-- redis -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <!-- mybatis通用mapper -->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${mybatis.version}</version>
             </dependency>
             <!-- jpa -->
             <dependency>
@@ -71,6 +46,34 @@
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+            <!-- MongoDB -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            </dependency>
+            <!-- redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+            <!-- 工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!-- mybatis通用mapper -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
             <!-- springfox-swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -95,12 +98,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring-boot.version}</version>
-                <scope>test</scope>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>

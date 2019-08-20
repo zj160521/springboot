@@ -35,14 +35,14 @@ public class PlatformStatTopo {
 		return topology;
 	}
 
-//	public static void main(String[] args) {
-//		//平台运营统计topo
-//		Topology topology = PlatformStatTopo.getTopology(args);
-//		try {
-//			StormSubmitter.submitTopology(topology.getTopologyName(), topology.getConf(), topology.getStormTopology());
-//		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public static void main(String[] args) {
+		//平台运营统计topo
+		Topology topology = PlatformStatTopo.getTopology(args);
+		try {
+			StormSubmitter.submitTopology(topology.getTopologyName(), topology.getConf(), topology.getStormTopology());
+		} catch (AlreadyAliveException | InvalidTopologyException | AuthorizationException e) {
+			e.printStackTrace();
+		}
+	}
 	
 }

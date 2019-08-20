@@ -1,4 +1,4 @@
-package com.gm.topology.finance;
+package com.gm.topology;
 
 import com.gm.bolt.financestatement.countbytime.BonusBolt;
 import com.gm.bolt.financestatement.countbytime.DepositeBolt;
