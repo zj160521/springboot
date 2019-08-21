@@ -3,11 +3,15 @@ package com.web.controller;
 import com.web.domain.TestDO;
 import com.web.service.TestService;
 import com.web.util.IDGenerator;
+import com.web.util.response.BaseResponse;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @Description:
@@ -28,16 +32,17 @@ public class TestController {
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public Object insert() {
+    public BaseResponse insert() {
         TestDO testDO = new TestDO();
         testDO.setId(IDGenerator.uuid());
         testDO.setName("手动阀");
+        testDO.setLogTime(LocalDateTime.now());
         service.insert(testDO);
-        return "ok";
+        return BaseResponse.success();
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
-    public Object get() {
-        return service.get();
+    public BaseResponse<List<TestDO>> get() {
+        return BaseResponse.success(service.get());
     }
 }

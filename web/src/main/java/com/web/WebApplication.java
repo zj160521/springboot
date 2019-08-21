@@ -14,9 +14,9 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableTransactionManagement
 @EnableSwagger2 //启动swagger
 @MapperScan("com.web.dao") // tk.mybatis扫描mapper目录
-public class Module1Application extends SpringBootServletInitializer {
+public class WebApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Module1Application.class, args);
+		SpringApplication.run(WebApplication.class, args);
 	}
 }

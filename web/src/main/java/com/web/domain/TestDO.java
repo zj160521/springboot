@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 /**
  * @Description:
@@ -15,6 +16,16 @@ import javax.persistence.Table;
 public class TestDO extends BaseDO{
     @ApiModelProperty(value = "姓名")
     private String name;
+    @ApiModelProperty(value = "日志时间")
+    private LocalDateTime logTime;
+
+    public LocalDateTime getLogTime() {
+        return logTime;
+    }
+
+    public void setLogTime(LocalDateTime logTime) {
+        this.logTime = logTime;
+    }
 
     public String getName() {
         return name;
