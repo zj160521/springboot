@@ -1,4 +1,4 @@
-package com.module1.util;
+package com.web.util;
 
 import java.util.UUID;
 

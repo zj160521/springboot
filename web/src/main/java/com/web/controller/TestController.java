@@ -1,8 +1,8 @@
-package com.module1.controller;
+package com.web.controller;
 
-import com.module1.domain.TestDO;
-import com.module1.service.TestService;
-import com.module1.util.IDGenerator;
+import com.web.domain.TestDO;
+import com.web.service.TestService;
+import com.web.util.IDGenerator;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

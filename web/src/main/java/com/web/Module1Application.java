@@ -1,4 +1,4 @@
-package com.module1;
+package com.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +13,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @EnableTransactionManagement
 @EnableSwagger2 //启动swagger
-@MapperScan("com.module1.dao") // tk.mybatis扫描mapper目录
+@MapperScan("com.web.dao") // tk.mybatis扫描mapper目录
 public class Module1Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

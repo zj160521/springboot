@@ -1,7 +1,7 @@
-package com.module1.service;
+package com.web.service;
 
-import com.module1.dao.ITestDao;
-import com.module1.domain.TestDO;
+import com.web.dao.ITestDao;
+import com.web.domain.TestDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
