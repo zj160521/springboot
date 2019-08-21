@@ -10,3 +10,9 @@ spring:
   application:
     name: web
 
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params: count=countSql
+

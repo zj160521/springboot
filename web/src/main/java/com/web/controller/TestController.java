@@ -1,5 +1,7 @@
 package com.web.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.web.domain.TestDO;
 import com.web.service.TestService;
 import com.web.util.IDGenerator;
@@ -42,7 +44,10 @@ public class TestController {
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
-    public BaseResponse<List<TestDO>> get() {
-        return BaseResponse.success(service.get());
+    public BaseResponse<PageInfo> get() {
+        PageHelper.startPage(2,2);
+        List<TestDO> testDOList = service.get();
+        PageInfo pageInfo = new PageInfo(testDOList);
+        return BaseResponse.success(pageInfo);
     }
 }
