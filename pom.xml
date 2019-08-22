@@ -33,6 +33,7 @@
         <mybatis.version>2.1.5</mybatis.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <pagehelper.version>1.2.10</pagehelper.version>
+        <springcloud.version>2.1.0.RELEASE</springcloud.version>
     </properties>
 
     <dependencyManagement>
@@ -69,7 +70,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>${springcloud.version}</version>
             </dependency>
             <!-- 工具包 -->
             <dependency>
