@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import tk.mybatis.spring.annotation.MapperScan;
@@ -14,6 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableTransactionManagement
 @EnableSwagger2 //启动swagger
 @MapperScan("com.web.dao") // tk.mybatis扫描mapper目录
+@EnableEurekaClient
 public class WebApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

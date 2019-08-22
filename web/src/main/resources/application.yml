@@ -9,7 +9,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: web
-
+# 指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+# 分页插件
 pagehelper:
   helperDialect: mysql
   reasonable: false
