@@ -8,6 +8,7 @@
         <module>web</module>
         <module>analyze</module>
         <module>eureka</module>
+        <module>user</module>
     </modules>
 
     <parent><!-- springboot 父级依赖,表明该项目是springboot项目 -->
@@ -121,7 +122,12 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
