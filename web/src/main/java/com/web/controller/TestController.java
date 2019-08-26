@@ -45,6 +45,7 @@ public class TestController {
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
     public BaseResponse<PageInfo> get() {
+        System.out.println("-----------");
         PageHelper.startPage(2,2);
         List<TestDO> testDOList = service.get();
         PageInfo pageInfo = new PageInfo(testDOList);

@@ -27,6 +27,7 @@
     <properties>
         <java.version>1.8</java.version> <!-- spring-boot-starter-parent默认指定Java1.8，此标签可修改 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><!-- spring-boot-starter-parent默认指定UTF-8，此标签可修改 -->
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <mysql.version>8.0.16</mysql.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
@@ -34,14 +35,28 @@
         <mybatis.version>2.1.5</mybatis.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <pagehelper.version>1.2.10</pagehelper.version>
-        <springcloud.version>2.1.0.RELEASE</springcloud.version>
+        <nacos.version>0.9.0.RELEASE</nacos.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
             <!-- jpa -->
@@ -68,17 +83,11 @@
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
             </dependency>
-            <!-- eureka -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-                <version>${springcloud.version}</version>
-            </dependency>
             <!-- nacos -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>0.9.0.RELEASE</version>
+                <version>${nacos.version}</version>
             </dependency>
             <!-- 工具包 -->
             <dependency>
@@ -130,6 +139,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <plugins>
             <plugin>
