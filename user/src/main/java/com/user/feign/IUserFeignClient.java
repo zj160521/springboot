@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @Author: zhouj
  * @Date: 2019/8/26 11:28
  */
-@FeignClient("web")
+@FeignClient("web-service")
 public interface IUserFeignClient {
     @PostMapping(value = "/test/get")
     BaseResponse get();

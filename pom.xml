@@ -9,6 +9,7 @@
         <module>analyze</module>
         <module>eureka</module>
         <module>user</module>
+        <module>gateway</module>
     </modules>
 
     <parent><!-- springboot 父级依赖,表明该项目是springboot项目 -->
