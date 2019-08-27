@@ -1,7 +1,7 @@
 package com.user.service;
 
+import com.core.util.response.BaseResponse;
 import com.user.feign.IUserFeignClient;
-import com.user.util.response.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

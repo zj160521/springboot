@@ -10,6 +10,7 @@
         <module>eureka</module>
         <module>user</module>
         <module>gateway</module>
+        <module>core</module>
     </modules>
 
     <parent><!-- springboot 父级依赖,表明该项目是springboot项目 -->
@@ -37,6 +38,7 @@
         <commons-lang3.version>3.4</commons-lang3.version>
         <pagehelper.version>1.2.10</pagehelper.version>
         <nacos.version>0.9.0.RELEASE</nacos.version>
+        <junit.version>4.11</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -90,7 +92,7 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${nacos.version}</version>
             </dependency>
-            <!-- 工具包 -->
+            <!-- lang工具包 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -108,13 +110,13 @@
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
-            <!-- springfox-swagger2 -->
+            <!-- swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${springfox-swagger.version}</version>
             </dependency>
-            <!-- springfox-swagger-ui -->
+            <!-- swagger-ui -->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
@@ -132,10 +134,11 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <!-- junit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

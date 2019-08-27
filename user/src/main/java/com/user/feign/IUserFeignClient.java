@@ -1,6 +1,6 @@
 package com.user.feign;
 
-import com.user.util.response.BaseResponse;
+import com.core.util.response.BaseResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
