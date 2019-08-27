@@ -7,13 +7,16 @@ spring:
     nacos:
       discovery:
         server-addr: node1:8848,node2:8848,node3:8848
-#        namespace: dev
+#        namespace: 56e815a8-77a7-4adc-8c98-d3554a29dab3
 zuul:
   routes:
     user-service: /gateway/user/**
     web-service: /gateway/web/**
 #  ignored-patterns: /*-service/**
 
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
 
 logging:
   level:
