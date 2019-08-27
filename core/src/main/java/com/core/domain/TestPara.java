@@ -1,4 +1,4 @@
-package com.user.domain;
+package com.core.domain;
 
 /**
  * @Description:

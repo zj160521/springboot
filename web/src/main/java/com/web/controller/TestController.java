@@ -1,5 +1,8 @@
 package com.web.controller;
 
+import com.core.domain.TestPara;
+import com.core.util.request.SystemRequestPageBean;
+import com.core.util.request.SystemRequestParam;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.web.domain.TestDO;
@@ -8,6 +11,7 @@ import com.web.util.IDGenerator;
 import com.web.util.response.BaseResponse;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,9 +48,10 @@ public class TestController {
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
-    public BaseResponse<PageInfo> get() {
-        System.out.println("-----------");
-        PageHelper.startPage(2,2);
+    public BaseResponse<PageInfo> get(@RequestBody SystemRequestParam<TestPara> requestParam) {
+        TestPara para = requestParam.getBody();
+        SystemRequestPageBean pageBean = requestParam.getPageBean();
+        PageHelper.startPage(pageBean.getPage(),pageBean.getPageSize());
         List<TestDO> testDOList = service.get();
         PageInfo pageInfo = new PageInfo(testDOList);
         return BaseResponse.success(pageInfo);

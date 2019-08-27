@@ -1,6 +1,6 @@
 package com.core.util.request;
 
-import com.zuul.constant.ClientType;
+import com.core.util.constant.ClientType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.Range;

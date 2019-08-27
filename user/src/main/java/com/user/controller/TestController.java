@@ -1,8 +1,8 @@
 package com.user.controller;
 
+import com.core.domain.TestPara;
 import com.core.util.request.SystemRequestParam;
 import com.core.util.response.BaseResponse;
-import com.user.domain.TestPara;
 import com.user.service.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,8 @@ public class TestController {
     private UserService service;
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
-    public BaseResponse get(@RequestBody SystemRequestParam<TestPara> gmRequestParam) {
-        BaseResponse info = service.getInfo();
+    public BaseResponse get(@RequestBody SystemRequestParam<TestPara> requestParam) {
+        BaseResponse info = service.getInfo(requestParam);
         return BaseResponse.success(info);
     }
 }
