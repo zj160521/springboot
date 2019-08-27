@@ -14,17 +14,18 @@ spring:
       discovery:
         server-addr: node1:8848,node2:8848,node3:8848
 #        namespace: dev
+
+logging:
+  level:
+    root: INFO
+  config: classpath:logback.xml
+
 feign:
   client:
     config:
       default:
         connectTimeout: 2000
         readTimeout: 2000
-# 指定注册中心地址
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://192.169.7.20:8100/eureka/
 
 # 分页插件
 pagehelper:
