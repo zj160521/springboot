@@ -16,7 +16,7 @@
  * Create Date : 2017-3-16
  */
 
-package com.user.util.response;
+package com.core.util.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

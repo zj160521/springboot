@@ -1,4 +1,4 @@
-package com.user.util.response;
+package com.core.util.response;
 
 import java.io.Serializable;
 
