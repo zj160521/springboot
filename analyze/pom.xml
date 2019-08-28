@@ -46,7 +46,6 @@
             <version>${storm.version}</version>
             <!-- <scope>provided</scope> -->
         </dependency>
-
         <!-- kafka -->
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -64,13 +63,13 @@
             <artifactId>storm-mongodb</artifactId>
             <version>${storm.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.codahale.metrics/metrics-core -->
+        <!-- metrics-core -->
         <dependency>
             <groupId>com.codahale.metrics</groupId>
             <artifactId>metrics-core</artifactId>
             <version>${metrics-core.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <!-- alibaba.fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
