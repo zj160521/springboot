@@ -41,9 +41,6 @@ public class TokenFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
         Map<String, String[]> parameterMap = request.getParameterMap();
         String requestURI = request.getRequestURI();
-//        String readAsChars = readAsChars(request);
-//        request.
-        System.out.println("-----------------***********");
         return null;
     }
 
