@@ -1,6 +1,7 @@
 package com.web.controller;
 
 import com.core.domain.TestPara;
+import com.core.exception.BizException;
 import com.core.util.request.SystemRequestPageBean;
 import com.core.util.request.SystemRequestParam;
 import com.github.pagehelper.PageHelper;
@@ -54,6 +55,7 @@ public class TestController {
         PageHelper.startPage(pageBean.getPage(),pageBean.getPageSize());
         List<TestDO> testDOList = service.get();
         PageInfo pageInfo = new PageInfo(testDOList);
-        return BaseResponse.success(pageInfo);
+//        return BaseResponse.success(pageInfo);
+        throw new BizException("asdfg");
     }
 }

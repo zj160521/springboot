@@ -15,8 +15,8 @@ zuul:
 #  ignored-patterns: /*-service/**
 
 ribbon:
-  ReadTimeout: 5000
-  ConnectTimeout: 5000
+  ReadTimeout: 4000
+  ConnectTimeout: 4000
 
 logging:
   level:

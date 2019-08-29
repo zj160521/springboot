@@ -21,6 +21,8 @@ logging:
   config: classpath:logback.xml
 
 feign:
+  hystrix:
+    enabled: true
   client:
     config:
       default:
