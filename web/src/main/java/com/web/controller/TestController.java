@@ -1,21 +1,20 @@
 package com.web.controller;
 
+import com.core.domain.TestDO;
 import com.core.domain.TestPara;
-import com.core.exception.BizException;
+import com.core.util.IDGenerator;
 import com.core.util.request.SystemRequestPageBean;
 import com.core.util.request.SystemRequestParam;
+import com.core.util.response.BaseResponse;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.web.domain.TestDO;
-import com.web.service.TestService;
-import com.web.util.IDGenerator;
-import com.web.util.response.BaseResponse;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import com.web.service.TestService;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -55,7 +54,7 @@ public class TestController {
         PageHelper.startPage(pageBean.getPage(),pageBean.getPageSize());
         List<TestDO> testDOList = service.get();
         PageInfo pageInfo = new PageInfo(testDOList);
-//        return BaseResponse.success(pageInfo);
-        throw new BizException("asdfg");
+        return BaseResponse.success(pageInfo);
+//        throw new BizException("asdfg");
     }
 }

@@ -1,4 +1,4 @@
-package com.web.domain;
+package com.core.domain;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

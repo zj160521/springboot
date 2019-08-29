@@ -1,7 +1,7 @@
 package com.web.dao;
 
 
-import com.web.domain.TestDO;
+import com.core.domain.TestDO;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
