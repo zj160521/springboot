@@ -7,6 +7,7 @@
     <modules><!-- 子模块 -->
         <module>analyze</module>
         <module>core</module>
+        <module>dao</module>
         <module>web</module>
         <module>user</module>
         <module>gateway</module>
