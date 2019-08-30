@@ -11,6 +11,7 @@
         <module>web</module>
         <module>user</module>
         <module>gateway</module>
+        <module>service</module>
     </modules>
 
     <parent><!-- springboot 父级依赖,表明该项目是springboot项目 -->
