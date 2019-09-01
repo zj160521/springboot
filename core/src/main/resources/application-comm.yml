@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://node3:3306/gm?useServerPrepStmts=false&rewriteBatchedStatements=true
+    url: jdbc:mysql://node3:3306/test?useServerPrepStmts=false&rewriteBatchedStatements=true
     username: root
     password: 999999
     driver-class-name: com.mysql.cj.jdbc.Driver
