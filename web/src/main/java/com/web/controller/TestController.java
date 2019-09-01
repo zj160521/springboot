@@ -38,10 +38,10 @@ public class TestController {
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public BaseResponse insert() {
+    public BaseResponse insert(@RequestBody SystemRequestParam<TestPara> requestParam) {
         TestDO testDO = new TestDO();
         testDO.setId(IDGenerator.uuid());
-        testDO.setName("手动阀");
+        testDO.setName(requestParam.getBody().getName());
         testDO.setLogTime(LocalDateTime.now());
         service.insert(testDO);
         return BaseResponse.success();

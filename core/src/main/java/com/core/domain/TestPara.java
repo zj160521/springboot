@@ -1,5 +1,7 @@
 package com.core.domain;
 
+import java.util.Date;
+
 /**
  * @Description:
  * @Author: zhouj
@@ -7,6 +9,15 @@ package com.core.domain;
  */
 public class TestPara {
     private String name;
+    private String logTime;
+
+    public String getLogTime() {
+        return logTime;
+    }
+
+    public void setLogTime(String logTime) {
+        this.logTime = logTime;
+    }
 
     public String getName() {
         return name;

@@ -4,6 +4,12 @@ spring:
     username: root
     password: 999999
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 8
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
   data:
     mongodb:
       uri: mongodb://root:root@192.169.7.20:27017/gm
