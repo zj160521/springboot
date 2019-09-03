@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>demo</groupId>
-            <artifactId>dao</artifactId>
+            <artifactId>service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

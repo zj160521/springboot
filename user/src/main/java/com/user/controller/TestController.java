@@ -5,6 +5,7 @@ import com.core.util.request.SystemRequestParam;
 import com.core.util.response.BaseResponse;
 import com.user.service.UserService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class TestController {
     private final static Logger logger = LoggerFactory.getLogger(TestController.class);
 
     @RequestMapping(value = "/get", method = RequestMethod.POST)
+    @ApiOperation(value = "获取测试时间", notes = "参数传name(测试名称，必传)、logTime(记录时间)")
     public BaseResponse get(@RequestBody SystemRequestParam<TestPara> requestParam) {
         logger.info("get 测试信息！");
         BaseResponse info = service.getInfo(requestParam);
