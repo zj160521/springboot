@@ -32,7 +32,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><!-- spring-boot-starter-parent默认指定UTF-8，此标签可修改 -->
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
-        <mysql.version>8.0.16</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <druid.version>1.1.18</druid.version>
         <mybatis.version>2.1.5</mybatis.version>
